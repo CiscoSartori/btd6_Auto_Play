@@ -3,6 +3,8 @@ import json
 from time import sleep
 import datetime
 import pyautogui
+import pydirectinput
+
 
 
 
@@ -17,12 +19,32 @@ class Function:
 
 	def map_verify(img):
 		game_map = None
-		while game_map == None
-
-
-map_list = {
+		array_map = 0
+		while game_map == None:
+			game_map = pyautogui.locateCenterOnScreen('resources/map/'+img[array_map]+'.png', confidence=0.9)
+			array_map += 1
+		array_map -= 1
+		return array_map
 	
-}
+
+	def round_verify(img):
+		round = None
+		while round == None:
+			round = pyautogui.locateCenterOnScreen('resources/round/'+img+'.png', confidence=0.9)
+			print('round')
+			sleep(3)
+	
+	def place_tower(tower_type, location):
+		pydirectinput.press(tower_type)
+		sleep(0.1)
+		pyautogui.moveTo(location[0], location[1])
+		sleep(0.1)
+		pyautogui.click(location[0], location[1])
+		sleep(0.2)
+
+
+
+
 tower_types = {
 	'hero': 'u',
 	'dart_monkey': 'q',

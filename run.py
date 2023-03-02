@@ -4,11 +4,12 @@ from time import sleep
 import datetime
 import pyautogui
 from function import Function
+from mapStrategy import MapStrategy
 
 def start():
 
 	Function.locateClick('resources/event/play.png')
-
+	sleep(0.5)
 	bonus = pyautogui.locateCenterOnScreen('resources/event/bonus.png',confidence=0.9)
 	while bonus == None:
 		sleep(0.5)
@@ -22,9 +23,10 @@ def start():
 	Function.locateClick('resources/difficulty/easy.png')
 
 	Function.locateClick('resources/difficulty/play.png')
+	sleep(5)
 	
 start()
-
+MapStrategy.strategy()
 
 
 
