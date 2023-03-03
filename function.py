@@ -30,8 +30,8 @@ class Function:
 	def round_verify(final, start):
 
 		while start < final:
-			screen = pyautogui.screenshot(region=(1438,33, 46, 31))
-			round = pyautogui.locateCenterOnScreen(screen, confidence=0.95)
+			screen = pyautogui.screenshot(region=(1466,31, 38, 34))
+			round = pyautogui.locateCenterOnScreen(screen, confidence=0.9)
 			while round != None:
 				round = pyautogui.locateCenterOnScreen(screen, confidence=0.95)
 			start += 1
