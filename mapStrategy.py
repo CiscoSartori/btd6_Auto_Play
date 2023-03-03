@@ -18,7 +18,8 @@ class MapStrategy:
 
         if selectedMap == 4:
             MapStrategy.one_two_tree()
-
+        if selectedMap == 7:
+            MapStrategy.the_cabin()
 
 
 
@@ -46,12 +47,35 @@ class MapStrategy:
         Function.place_tower('u', )
 
     def one_two_tree():
-        tower=[253,815]
+        tower=[245,820]
+        round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
-        Function.round_verify('10')
-        print('chegou aqui')
+        round=Function.round_verify(10,round)
+        print('chegou aqui10', round)
+        ice=[1409,400]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+
+        round=Function.round_verify(20,round)
+        print('chegou aqui20', round)
+        tack_shooter=[480,404]
+        Function.place_tower('r',tack_shooter)
+        Function.upgrade_tower(2,0,3,tack_shooter)
+        alchemist=[507,244]
+        Function.place_tower('f',alchemist)
+        Function.upgrade_tower(2,2,0,alchemist)
+        round+=1
+        round=Function.round_verify(30,round)
+        print('chegou aqui30', round)
+        village=[1220,254]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(1,2,0,village)
+
+        round=Function.round_verify(35,round)
+        print('chegou aqui35', round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
 
     def scrapyard():
         tower=[12,12]
@@ -62,8 +86,29 @@ class MapStrategy:
         Function.place_tower('u', )
 
     def the_cabin():
-        tower=[12,12]
-        Function.place_tower('u', )
+        tower=[661,153]
+        round=0
+        Function.place_tower('u',tower)
+        pydirectinput.press('space')
+        pydirectinput.press('space')
+        round=Function.round_verify(10,round)
+        print('chegou aqui10', round)
+        ice=[477,956]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        round=Function.round_verify(20,round)
+        buccaneer=[947,301]
+        Function.place_tower('c',buccaneer)
+        Function.upgrade_tower(2,2,0,buccaneer)
+        print('chegou aqui20',round)
+        round=Function.round_verify(30,round)
+        village=[567,796]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(2,2,0,village)
+        print('chegou aqui30',round)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(1,0,0,buccaneer)
+        print('chegou aqui35',round)
 
     def cubism():
         tower=[12,12]

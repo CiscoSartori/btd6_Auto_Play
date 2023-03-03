@@ -27,13 +27,18 @@ class Function:
 		return array_map
 	
 
-	def round_verify(img):
-		round = None
-		while round == None:
-			round = pyautogui.locateCenterOnScreen('resources/round/'+img+'.png', confidence=0.9)
-			print('round')
-			sleep(3)
-	
+	def round_verify(final, start):
+
+		while start < final:
+			screen = pyautogui.screenshot(region=(1438,33, 46, 31))
+			round = pyautogui.locateCenterOnScreen(screen, confidence=0.95)
+			while round != None:
+				round = pyautogui.locateCenterOnScreen(screen, confidence=0.95)
+			start += 1
+			print('round',start)
+			sleep(2)
+		return start
+
 	def place_tower(tower_type, location):
 		pydirectinput.press(tower_type)
 		sleep(0.1)
@@ -41,6 +46,23 @@ class Function:
 		sleep(0.1)
 		pyautogui.click(location[0], location[1])
 		sleep(0.2)
+	
+	def upgrade_tower(up1,up2,up3,location):
+		pyautogui.click(location[0], location[1])
+		sleep(0.1)
+		while up1 != 0:
+			pydirectinput.press(',')
+			up1-=1
+			sleep(0.1)
+		while up2 != 0:
+			pydirectinput.press('.')
+			up2-=1
+			sleep(0.1)
+		while up3 != 0:
+			pydirectinput.press('/')
+			up3-=1
+			sleep(0.1)
+		pyautogui.click(location[0], location[1])
 
 
 
