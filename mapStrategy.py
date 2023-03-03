@@ -8,7 +8,12 @@ from function import Function
 
 map_list = ['monkey_meadow','tree_stump','town_center',
             'middle_of_the_road','one_two_tree',
-            'scrapyard','cubism', 'the_cabin']
+            'scrapyard','cubism','the_cabin',
+            'resort','skates','lotus_island',
+            'candy_falls','winter_park','carved',
+            'park_path','alpine_run','frozen_over',
+            'in_the_loop','cubism','four_circles',
+            'hedge','end_of_the_road','logs']
 class MapStrategy:
 
     def strategy():
@@ -16,16 +21,15 @@ class MapStrategy:
         print(selectedMap)
         print(map_list[selectedMap])
 
+
+
         if selectedMap == 4:
             MapStrategy.one_two_tree()
         if selectedMap == 7:
             MapStrategy.the_cabin()
-
-
-
-
-
-
+        if selectedMap == 10:
+            MapStrategy.lotus_island()
+        
 
 
 
@@ -66,7 +70,7 @@ class MapStrategy:
         alchemist=[507,244]
         Function.place_tower('f',alchemist)
         Function.upgrade_tower(2,2,0,alchemist)
-        round+=1
+        round+=2
         round=Function.round_verify(30,round)
         print('chegou aqui30', round)
         village=[1220,254]
@@ -76,14 +80,12 @@ class MapStrategy:
         round=Function.round_verify(35,round)
         print('chegou aqui35', round)
         Function.upgrade_tower(0,0,1,tack_shooter)
+        round=Function.round_verify(37,round)
+        Function.upgrade_tower(2,0,0,alchemist)
 
     def scrapyard():
-        tower=[12,12]
-        Function.place_tower('u', )
             
     def cubism():
-        tower=[12,12]
-        Function.place_tower('u', )
 
     def the_cabin():
         tower=[661,153]
@@ -110,6 +112,29 @@ class MapStrategy:
         Function.upgrade_tower(1,0,0,buccaneer)
         print('chegou aqui35',round)
 
+    def lotus_island():
+        tower=[661,153]
+        round=0
+        Function.place_tower('u',tower)
+        pydirectinput.press('space')
+        pydirectinput.press('space')
+        round=Function.round_verify(10,round)
+
+    def cubism():
+        tower=[12,12]
+        Function.place_tower('u', )
+    def cubism():
+        tower=[12,12]
+        Function.place_tower('u', )
+    def cubism():
+        tower=[12,12]
+        Function.place_tower('u', )
+    def cubism():
+        tower=[12,12]
+        Function.place_tower('u', )
+    def cubism():
+        tower=[12,12]
+        Function.place_tower('u', )
     def cubism():
         tower=[12,12]
         Function.place_tower('u', )
