@@ -22,8 +22,6 @@ class MapStrategy:
         print(map_list[selectedMap])
 
         
-        
-        
         if selectedMap == 0:
             MapStrategy.monkey_meadow()
         if selectedMap == 1:
@@ -126,20 +124,51 @@ class MapStrategy:
         Function.upgrade_tower(3,2,0,spike)
 
     def town_center():
-        tower=[661,153]
-        round=0
+        tower=[561,487]
+        round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        wizard=[701,478]
+        Function.place_tower('a',wizard)
+        Function.upgrade_tower(0,2,2,wizard)
+        round-=1
+        round=Function.round_verify(20,round)
+        ice=[1054,513]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        round+=1
+        round=Function.round_verify(30,round)
+        village=[1050,334]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(0,2,0,village)
+        round=Function.round_verify(37,round)
+        spike=[1560,459]
+        Function.place_tower('j',spike)
+        Function.upgrade_tower(3,2,0,spike)
 
     def middle_of_the_road():
-        tower=[661,153]
-        round=0
+        tower=[986,539]
+        round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        ice=[469,422]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        round-=1
+        round=Function.round_verify(20,round)
+        buccaneer=[1355,658]
+        Function.place_tower('c',buccaneer)
+        Function.upgrade_tower(2,2,0,buccaneer)
+        round=Function.round_verify(30,round)
+        village=[546,565]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(2,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(1,0,0,buccaneer)
 
     def one_two_tree():
         tower=[245,820]
@@ -166,15 +195,35 @@ class MapStrategy:
         round=Function.round_verify(35,round)
         Function.upgrade_tower(0,0,1,tack_shooter)
         round=Function.round_verify(37,round)
-        Function.upgrade_tower(2,0,0,alchemist)
+        Function.upgrade_tower(0,0,1,tack_shooter)
 
     def scrapyard():
-        tower=[661,153]
-        round=0
+        tower=[672,666]
+        round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        tack_shooter=[679,444]
+        Function.place_tower('r',tack_shooter)
+        Function.upgrade_tower(2,0,3,tack_shooter)
+        round-=1
+        round=Function.round_verify(20,round)
+        ice=[1313,185]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        alchemist=[538,343]
+        Function.place_tower('f',alchemist)
+        Function.upgrade_tower(2,2,0,alchemist)
+        round+=1
+        round=Function.round_verify(30,round)
+        village=[1102,166]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(1,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
+        round=Function.round_verify(37,round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
 
     def the_cabin():
         tower=[661,153]
@@ -186,7 +235,7 @@ class MapStrategy:
         ice=[477,956]
         Function.place_tower('t',ice)
         Function.upgrade_tower(0,2,2,ice)
-        round=-1
+        round-=1
         round=Function.round_verify(20,round)
         buccaneer=[947,301]
         Function.place_tower('c',buccaneer)
@@ -199,20 +248,52 @@ class MapStrategy:
         Function.upgrade_tower(1,0,0,buccaneer)
     
     def resort():
-        tower=[661,153]
-        round=0
-        Function.place_tower('u',tower)
-        pydirectinput.press('space')
-        pydirectinput.press('space')
-        round=Function.round_verify(10,round)
-
-    def skates():
-        tower=[661,153]
+        tower=[1314,221]
         round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        ice=[196,198]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        round-=1
+        round=Function.round_verify(20,round)
+        buccaneer=[1096,305]
+        Function.place_tower('c',buccaneer)
+        Function.upgrade_tower(2,2,0,buccaneer)
+        round=Function.round_verify(30,round)
+        village=[118,380]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(2,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(1,0,0,buccaneer)
+
+    def skates():
+        tower=[323,291]
+        round=1
+        Function.place_tower('u',tower)
+        pydirectinput.press('space')
+        pydirectinput.press('space')
+        # round=Function.round_verify(10,round)
+        sleep(90)
+        ice=[1312,901]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        round-=1
+        # round=Function.round_verify(20,round)
+        sleep(70)
+        buccaneer=[768,584]
+        Function.place_tower('c',buccaneer)
+        Function.upgrade_tower(2,2,0,buccaneer)
+        # round=Function.round_verify(30,round)
+        sleep(60)
+        village=[1449,979]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(2,2,0,village)
+        sleep(60)
+        # round=Function.round_verify(35,round)
+        Function.upgrade_tower(1,0,0,buccaneer)
 
 
     def lotus_island():
@@ -241,12 +322,25 @@ class MapStrategy:
         Function.upgrade_tower(1,0,0,buccaneer)
 
     def candy_falls():
-        tower=[245,820]
+        tower=[263,897]
         round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        ice=[1392,279]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        round=Function.round_verify(20,round)
+        buccaneer=[733,618]
+        Function.place_tower('c',buccaneer)
+        Function.upgrade_tower(2,2,0,buccaneer)
+        round=Function.round_verify(30,round)
+        village=[1495,413]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(2,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(1,0,0,buccaneer)
         
     def winter_park():
         tower=[393,249]
@@ -277,20 +371,53 @@ class MapStrategy:
         Function.upgrade_tower(0,0,1,dart)
 
     def carved():
-        tower=[245,820]
+        tower=[847,717]
         round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        tack_shooter=[1036,769]
+        Function.place_tower('r',tack_shooter)
+        Function.upgrade_tower(2,0,3,tack_shooter)
+        round=Function.round_verify(20,round)
+        ice=[1298,432]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        alchemist=[939,869]
+        Function.place_tower('f',alchemist)
+        Function.upgrade_tower(2,2,0,alchemist)
+        round+=1
+        round=Function.round_verify(30,round)
+        village=[1193,458]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(1,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
+        round=Function.round_verify(37,round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
 
     def park_path():
-        tower=[245,820]
+        tower=[1265,203]
         round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        ice=[1399,612]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        round-=1
+        round=Function.round_verify(20,round)
+        buccaneer=[816,565]
+        Function.place_tower('c',buccaneer)
+        Function.upgrade_tower(2,2,0,buccaneer)
+        round=Function.round_verify(30,round)
+        village=[1476,733]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(2,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(1,0,0,buccaneer)
 
     def alpine_run():
         tower=[517,806]
@@ -354,44 +481,130 @@ class MapStrategy:
         Function.upgrade_tower(0,0,1,tack_shooter)
 
     def in_the_loop():
-        tower=[245,820]
+        tower=[1141,727]
         round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        ice=[571,278]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        round-=1
+        round=Function.round_verify(20,round)
+        buccaneer=[1089,363]
+        Function.place_tower('c',buccaneer)
+        Function.upgrade_tower(2,2,0,buccaneer)
+        round=Function.round_verify(30,round)
+        village=[681,339]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(2,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(1,0,0,buccaneer)
 
     def cubism():
-        tower=[661,153]
+        tower=[587,486]
         round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        tack_shooter=[627,606]
+        Function.place_tower('r',tack_shooter)
+        Function.upgrade_tower(2,0,3,tack_shooter)
+        round=Function.round_verify(20,round)
+        ice=[1373,707]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        alchemist=[590,768]
+        Function.place_tower('f',alchemist)
+        Function.upgrade_tower(2,2,0,alchemist)
+        round+=1
+        round=Function.round_verify(30,round)
+        village=[1396,597]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(0,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
+        round=Function.round_verify(37,round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
 
     def four_circles():
-        tower=[661,153]
+        tower=[813,504]
         round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        tack_shooter=[813,600]
+        Function.place_tower('r',tack_shooter)
+        Function.upgrade_tower(2,0,3,tack_shooter)
+        round-=1
+        round=Function.round_verify(20,round)
+        ice=[1187,226]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        alchemist=[763,739]
+        Function.place_tower('f',alchemist)
+        Function.upgrade_tower(2,2,0,alchemist)
+        round+=1
+        round=Function.round_verify(30,round)
+        village=[1037,318]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(0,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
+        round=Function.round_verify(37,round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
 
     def hedge():
-        tower=[661,153]
+        tower=[175,589]
         round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        tack_shooter=[313,603]
+        Function.place_tower('r',tack_shooter)
+        Function.upgrade_tower(2,0,3,tack_shooter)
+        round=Function.round_verify(20,round)
+        ice=[1354,611]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        alchemist=[451,581]
+        Function.place_tower('f',alchemist)
+        Function.upgrade_tower(2,2,0,alchemist)
+        round+=1
+        round=Function.round_verify(30,round)
+        village=[1365,765]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(0,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
+        round=Function.round_verify(37,round)
+        Function.upgrade_tower(0,0,1,tack_shooter)
 
     def end_of_the_road():
-        tower=[661,153]
+        tower=[485,365]
         round=1
         Function.place_tower('u',tower)
         pydirectinput.press('space')
         pydirectinput.press('space')
         round=Function.round_verify(10,round)
+        ice=[116,466]
+        Function.place_tower('t',ice)
+        Function.upgrade_tower(0,2,2,ice)
+        round-=1
+        round=Function.round_verify(20,round)
+        buccaneer=[1177,562]
+        Function.place_tower('c',buccaneer)
+        Function.upgrade_tower(2,2,0,buccaneer)
+        round=Function.round_verify(30,round)
+        village=[112,315]
+        Function.place_tower('k',village)
+        Function.upgrade_tower(2,2,0,village)
+        round=Function.round_verify(35,round)
+        Function.upgrade_tower(1,0,0,buccaneer)
 
     def logs():
         tower=[480,712]
