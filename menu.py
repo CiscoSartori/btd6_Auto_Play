@@ -10,14 +10,14 @@ class Menu:
     def start():
 
         Function.locateClick('resources/event/play.png')
-        sleep(0.5)
-        bonus = pyautogui.locateCenterOnScreen('resources/event/bonus.png',confidence=0.9)
+        sleep(1)
+        bonus = pyautogui.locateCenterOnScreen('resources/event/bonus.png',confidence=0.7)
         while bonus == None:
-            sleep(0.5)
+            sleep(2)
             right = pyautogui.locateCenterOnScreen('resources/map/right.png',confidence=0.9)
             pyautogui.click(right.x, right.y)
-            sleep(0.5)
-            bonus = pyautogui.locateCenterOnScreen('resources/event/bonus.png',confidence=0.9)
+            sleep(2)
+            bonus = pyautogui.locateCenterOnScreen('resources/event/bonus.png',confidence=0.7)
         pyautogui.click(bonus.x, bonus.y)
         sleep(0.5)
         

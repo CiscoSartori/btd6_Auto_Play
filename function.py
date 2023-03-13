@@ -21,7 +21,7 @@ class Function:
 		game_map = None
 		array_map = 0
 		while game_map == None:
-			game_map = pyautogui.locateCenterOnScreen('resources/map/'+img[array_map]+'.png', confidence=0.9)
+			game_map = pyautogui.locateCenterOnScreen('resources/map/'+img[array_map]+'.png', confidence=0.8)
 			array_map += 1
 		array_map -= 1
 		return array_map
