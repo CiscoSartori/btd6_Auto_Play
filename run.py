@@ -10,7 +10,8 @@ from menu import Menu
 
 
 
-for i in range(100):
-	Menu.start()
+for i in range(1000):
+	Menu.start2()
 	MapStrategy.strategy()
 	Menu.end()
+	print('done')

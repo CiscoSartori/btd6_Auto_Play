@@ -44,5 +44,18 @@ class Menu:
 
         sleep(0.5)
 
+    def start2():
+
+        Function.locateClick('resources/event/play.png')
+        sleep(1)
+        Function.locateClick('resources/map/left.png')
         
+        Function.locateClick('resources/map2/dark_castle.png')
+        # Function.locateClick('resources/map/'+mapa+'.png')
+        
+        
+        Function.locateClick('resources/difficulty/hard.png')
+
+        Function.locateClick('resources/difficulty/chimps.png')
+        sleep(5)
 	

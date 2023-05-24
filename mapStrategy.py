@@ -13,7 +13,7 @@ map_list = ['monkey_meadow','tree_stump','town_center',
             'candy_falls','winter_park','carved',
             'park_path','alpine_run','frozen_over',
             'in_the_loop','cubism','four_circles',
-            'hedge','end_of_the_road','logs']
+            'hedge','end_of_the_road','logs', 'dark_castle']
 class MapStrategy:
 
     def strategy():
@@ -66,6 +66,8 @@ class MapStrategy:
             MapStrategy.end_of_the_road()
         if selectedMap == 21:
             MapStrategy.logs()
+        if selectedMap == 22:
+            MapStrategy.dark_castle()
         
 
 
@@ -633,3 +635,8 @@ class MapStrategy:
         Function.upgrade_tower(0,0,1,tack_shooter)
         round=Function.round_verify(37,round)
         Function.upgrade_tower(0,0,1,tack_shooter)
+
+    def dark_castle():
+            tower=[245,820]
+            round=1
+            Function.place_tower('u',tower)
